@@ -9,14 +9,5 @@ csrf = CSRFProtect(app)
 def pagina_inicial():
   return "MBA Arquitetura e Soluções FIAP - Grupo 25"
 
-@app.route('/bug')
-def bad():
-  try:
-    raise TypeError()
-  except TypeError as e:
-    print(e)
-  except TypeError as e:
-    print("Duplicado, ou seja, nunca vai entrar aqui.") 
-
 if __name__ == '__main__':
   app.run()
